@@ -1,0 +1,96 @@
+.navigation
+    &__toggle
+        display: none
+    &__button
+        background: white
+        height: 7rem
+        width: 7rem
+        border-radius: 50%
+        position: fixed
+        top: 10rem
+        right: 10rem
+        z-index: 4
+        text-align: center
+        cursor: pointer
+        filter: $box-shadow
+    &__background
+        width: 5rem
+        height: 5rem
+        border-radius: 50%
+        background: radial-gradient($color-brown-light, $color-brown-darck)
+        position: fixed
+        right: 11rem
+        top: 11rem
+        z-index: 1
+        transition: all .6s
+    &__nav
+        height: 100vh
+        position: fixed
+        top: 0
+        right: 0
+        z-index: -1
+        width: 0
+        opacity: 0
+        transition: all .6s 
+        
+    &__list
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        list-style: none
+        width: 100%
+    &__item
+        text-align: center
+        margin-bottom: 5rem
+    &__link
+        &:link, &:visited
+            font-size: 4rem
+            letter-spacing: .5rem
+            color: white
+            text-decoration: none
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%)
+            background-size: 230%
+            padding: 1rem 2rem
+            transition: all .3s
+        &:hover, &:active
+            background-position: 100%
+            color: $color-brown-darck
+    &__toggle:checked ~ &__background
+        transform: scale(150)
+    &__toggle:checked ~ &__nav
+        width: 100%
+        opacity: 1
+        z-index: 2
+    &__icon
+        position: relative
+        margin-top: 34px
+        &,
+        &::before,
+        &::after
+            width: 30px
+            height: 2px
+            background: black
+            display: inline-block
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+            transition: all .2s
+        &::before
+            top: -10px
+        &::after
+            top: 10px
+    &__button:hover &__icon::before
+        top: -12px
+    &__button:hover &__icon::after
+        top: 12px
+    &__toggle:checked + &__button &__icon
+        background: transparent
+    &__toggle:checked + &__button &__icon::before
+        transform: rotate(-135deg)
+        top: 0
+    &__toggle:checked + &__button &__icon::after
+        transform: rotate(135deg)
+        top: 0

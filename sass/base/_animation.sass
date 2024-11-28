@@ -1,0 +1,98 @@
+@keyframes animation-text
+    0%
+        opacity: 0
+        transform: translateY(-0.7rem)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+.tour-card
+    width: 34.1rem
+    height: 52rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    &__button
+        margin-bottom: 10rem
+    &__side
+        width: 34.1rem
+        height: 52rem
+        transition: .7s all ease-out
+        position: absolute
+        top: 0 
+        left: 0
+        backface-visibility: hidden
+        &_front-title
+            width: 22.3rem
+            height: 4.5rem
+            position: absolute
+            background: $gradien-brown_light-brown_darck
+            color: white
+            top: 35%
+            right: 0%
+            display: flex
+            align-items: end
+            justify-content: center
+            h2
+                font-size: 2.8rem
+                font-weight: 300
+        &_front-sub-title
+            width: 11.2rem
+            height: 4.5rem
+            position: absolute
+            background: $gradien-brown_light-brown_darck
+            color: white
+            top: 43%
+            right: 0%
+            display: flex
+            
+            justify-content: center
+            h2
+                font-size: 2.8rem
+                font-weight: 300
+        &_front
+            background: white
+            img
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%)
+                margin-bottom: 4.5rem
+        &_back
+            background: $gradien-brown_light-brown_darck
+            transform: rotateY(180deg)
+            display: flex
+            justify-content: end
+            flex-direction: column
+            align-items: center
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+.back
+    &__text
+        font-weight: 300
+        font-style: normal
+        color: white
+        margin-bottom: 8.7rem
+        line-height: 1.9rem
+        letter-spacing: .2rem
+        font-size: 1.6rem
+    &__price
+        margin-bottom: 8.7rem
+        font-style: normal
+        font-weight: 400
+        font-size: 6rem
+        line-height: 7.2rem
+        color: white
+.front
+    text-align: center
+    text-decoration: underline
+    &__text
+        margin-bottom: 2rem
+        font-size: 1.4rem
+        &:last-child
+            margin-bottom: 0
+.card-two
+    width: 17.1rem
+.card-three
+    width: 23.2rem
+    &_sub
+        width: 21.7rem

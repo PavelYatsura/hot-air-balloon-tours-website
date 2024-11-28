@@ -1,0 +1,89 @@
+.section-feedback
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    &__title
+        padding-top: 8rem
+        margin-bottom: 8rem
+        color: white
+        filter:$box-shadow
+        text-align: center
+    &__video
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 2
+        
+    &__gradient
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $gradien-brown_light-brown_darck
+        z-index: 3
+        opacity: 0.5
+    &__button
+        margin-bottom: 8rem
+        display: flex
+        justify-content: center
+    &__container
+        
+        position: relative
+        z-index: 5
+        
+.feedback-card
+    width: 105.7rem
+    height: 26.7rem
+    background: rgba(white, 0.85)
+    filter: $box-shadow
+    padding: 6rem
+    padding-left: 17rem
+    padding-right: 18.1rem
+    transform: skewX(335deg)
+    margin-bottom: 8rem
+    & > *
+        transform: skewX(-335deg)
+    &__img
+        width: 16.7rem
+        height: 16.7rem
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkit-shape-outside: circle(50% at 50% 50%)
+        margin-right: 4rem
+        overflow: hidden
+        position: relative
+        img
+            height: 100%
+            transform: scale(1.2)
+            transition: all .3s
+    &__name
+        text-align: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-20%)
+        font-size: 2.4rem
+        letter-spacing: .2rem
+        font-weight: 400
+        color: white
+        opacity: 0
+        transition: all .3s
+    &:hover &__name
+        transform: translate(-50%,-50%)
+        opacity: 1
+    &:hover img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(70%)
+    &__box
+        h3
+            margin-bottom: 1rem
+            font-size: 2rem
+            font-weight: 700
+        p
+            font-weight: 400

@@ -1,0 +1,31 @@
+.second-section
+    min-height: 95vh
+    background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url(../img/second-section-back.png) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
+    display: flex
+    align-items: center
+    margin-bottom: 8rem
+    &__cards-box
+        display: flex
+        flex-direction: row
+    &__card
+        width: 24rem
+        height: 30rem
+        background: rgba(255, 255, 255, 0.8)
+        border-radius: .5rem
+        filter: $box-shadow
+        text-align: center
+        padding:  2.5rem
+        margin-right: 6rem
+        &:last-child
+            margin-right: 0
+        &:hover
+            transform: translateY(-.5rem)
+            transition: all .2s
+    &__card-img
+        margin-bottom: 2.4rem
+    &__card-title
+        margin-bottom: 1rem
+    &__card-text
+        font-weight: 300
+        font-size: 1.5rem
